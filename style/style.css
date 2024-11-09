@@ -11,7 +11,7 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(238, 237, 237);
+    background-color: rgb(255, 254, 201);
 }
 
 .home-head-logo {
@@ -23,7 +23,7 @@
 }
 
 .home-head-logo img {
-    height: 60%
+    height: 80%
 }
 
 .navbar {
@@ -42,12 +42,27 @@
     margin-right: 2rem;
     align-items: center;
     font-family: "Montserrat", sans-serif;
+    font-size: large;
     list-style: none;
 }
 .links a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: larger;
+    position: relative;
 }
 
+.links a::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: rgb(5, 76, 162);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.35s ease-in-out;
+}
 
+.links a:hover::after {
+    width: 100%;
+}
