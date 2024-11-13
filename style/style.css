@@ -4,6 +4,8 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 
     
 }
@@ -11,7 +13,7 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 254, 201);
+    background-color: rgb(255, 254, 254);
 }
 
 .home-head-logo {
@@ -31,6 +33,8 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    background-color: azure;
+    border-bottom: solid 1px rgb(211, 214, 214);
 }
 
 .links {
@@ -41,7 +45,6 @@
     gap: 2rem;
     margin-right: 2rem;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
     font-size: large;
     list-style: none;
 }
@@ -65,4 +68,79 @@
 
 .links a:hover::after {
     width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input{
+    width: 700px;
+    height: 3rem;
+    border-radius: 45px;
+    padding: 0 16px 0 16px;
+    border: solid rgb(255, 255, 255) 1px;
+    box-shadow: 0 0 15px 1px rgb(218, 218, 218);
+}
+
+
+.search-bar button {
+    width: 130px;
+    height: 3rem;
+    border-radius: 45px;
+    padding: 0 16px 0 16px;
+    background-color:  rgb(5, 76, 162);
+    color: white;
+    box-shadow: 0 0 15px 1px rgb(218, 218, 218);
+    border: none;
+}
+
+.search-bar button:hover {
+   background-color: rgb(0, 43, 96); 
+}
+
+.slider {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slides {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.slide input {
+    display: none;
+}
+
+.slide img {
+    width: 80%;
+}
+
+.manual-navigation {
+   position: absolute; 
+   width: 80%;
+   margin-top: -40px;
+   display: flex;
+   justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.manual-btn:hover {
+    background-color:  rgb(5, 76, 162);
 }
