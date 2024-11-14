@@ -104,7 +104,7 @@
 }
 
 .slider {
-    width: 80%;
+    width: 1280px;
     height: auto;
     overflow: hidden;
     display: flex;
@@ -112,7 +112,7 @@
 }
 
 .slides {
-    width: 100%;
+    width: 1280px;
     height: auto;
     display: flex;
 }
@@ -122,7 +122,7 @@
 }
 
 .slide img {
-    width: 80%;
+    width: 1280px;
 }
 
 .manual-navigation {
