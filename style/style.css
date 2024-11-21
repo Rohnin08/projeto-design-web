@@ -169,8 +169,8 @@
   
   /* Cada caixa */
   .box {
-    width: 420px;
-    height: 320px;
+    width: 400px;
+    height: 300px;
     background-color: #ccc; /* Cor de fundo da caixa */
     position: relative;
     border-radius: 10px; /* Borda arredondada */
