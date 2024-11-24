@@ -116,89 +116,64 @@
 #destinos {
     display: flex;
     flex-direction: column;
-}
-
-/*.boxes {
-    display: flex;
-    margin: 2rem;
-    flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-
-}
-
-.box {
-    width: 420px;
-    height: 320px;
-    background-color: blue;
-    position: relative; 
-    overflow: hidden; 
-    text-align: center; 
-    display: flex; 
+    padding: 2rem;
     justify-content: center;
-    align-items: center;
-
+    margin-right: 2rem;
+    margin-left:2rem;
 }
 
-.box .box-text-hover {
-    position: absolute;
-      font-size: 20px;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.7); 
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: none; 
-      text-align: center;
+.destinos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 118px;
+    align-items: flex-start;
     
+
 }
 
-.box:hover .box-text-hover {
-    .hover-box:hover .hover-text {
-        display: block;
+.destinos h1{
+    font-size: xx-large;
+    color:  rgb(5, 76, 162);
 }
-
-*/
-
-/* Estilo das caixas principais */
 .boxes {
-    display: flex; /* Ativa flexbox */
-    flex-wrap: wrap; /* Permite quebrar linha para telas menores */
-    gap: 20px; /* Espaçamento entre as caixas */
-    justify-content: center; /* Centraliza horizontalmente */
-  }
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin: 2rem;
+}
   
-  /* Cada caixa */
   .box {
     width: 400px;
     height: 300px;
-    background-color: #ccc; /* Cor de fundo da caixa */
+    background-color: #ccc; 
     position: relative;
-    border-radius: 10px; /* Borda arredondada */
+    border-radius: 10px; 
     display: flex;
-    justify-content: center; /* Alinha conteúdo horizontalmente */
-    align-items: center; /* Alinha conteúdo verticalmente */
-    overflow: hidden; /* Impede que o texto saia da caixa */
-    cursor: pointer; /* Indica interatividade */
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+    cursor: pointer; 
   }
   
-  /* Texto dentro da caixa no hover */
   .box-text-hover {
     color: white;
     font-size: 1em;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
-    position: absolute; /* Para sobreposição */
-    inset: 0; /* Ocupa a caixa inteira */
-    opacity: 0; /* Invisível inicialmente */
+    background-color: rgba(0, 0, 0, 0.7); 
+    position: absolute;
+    inset: 0; 
+    opacity: 0; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease-in-out; /* Efeito suave */
-  }
+    transition: opacity 0.3s ease-in-out; 
+    text-align: justify;
+}
   
-  /* Mostra o texto no hover */
   .box:hover .box-text-hover {
-    opacity: 1; /* Visível no hover */
+    opacity: 1; 
   }
