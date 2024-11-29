@@ -3,96 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destinos</title>
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
     <div class="home-container">
-        <div class="home-container">
+        <!-- Cabeçalho e navegação -->
+        <nav class="navbar">
+            <div class="home-head-logo">
+                <img src="/imgs/Pyxis-removebg-preview.png" alt="logo">
+            </div>
+            <ul class="links">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="itinerarios.html">Itinerários</a></li>
+                <li><a href="dicas.html">Dicas de Viagem</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
 
-            <nav class="navbar">
-                <div class="home-head-logo">
-                    <img src="/imgs/Pyxis-removebg-preview.png" alt="logo">
-                </div>
-    
-                <!--Lista de links para as paginas do site-->
-                <ul class="links">
-                    <li><a href="/home.html">Home</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="itinerarios .html">Itinerarios</a></li>
-                    <li><a href="dicas.html">Dicas de viagem</a></li>
-                    <li><a href="galeria.html">Galeria</a></li>
-                </ul>
-            </nav>
-
-    <section id="destinos">
-        <div class="destinos">
+        <!-- Seção de destinos -->
+        <section id="destinos">
             <h1>Destinos</h1>
-            <p>Todos os destinos</p>
-        </div>
+            <p>Escolha um continente para explorar nossos destinos incríveis:</p>
 
-        <div class="boxes">
-            
-            <div class="box">
-                <img src="/imgs/Design sem nome/1.png" alt="">
-                <div class="box-text-hover">
-                    <h1>Paris, França</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aperiam voluptates suscipit ab quod nam ipsa ad ut, ex accusantium et qui nihil iste numquam quibusdam debitis dolore culpa voluptas?</p>
-                </div>
-            </div>
+            <!-- Europa -->
+            <div class="destino-secao">
+                <h2>Europa</h2>
+                <div class="destino-grid">
+                    <button><i class="fa-solid fa-arrow-right fa-flip-horizontal"></i></button>
 
-            <div class="box">
-                <img src="/imgs/Design sem nome/2.png" alt="">
-                <div class="box-text-hover">
-                    <h1>Toquio, Japão</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus harum dolorum earum cumque consectetur adipisci voluptatem asperiores eligendi ad nostrum repudiandae error, voluptatibus maxime odio totam, laudantium recusandae in! Est!</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/imgs/Design sem nome/3.png" alt="">
-                <div class="box-text-hover">
-                    <h1>Nova Iorque, Estados Unidos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe asperiores eveniet corporis vitae veniam rerum molestias suscipit nemo libero tempore officiis minima, error magnam assumenda harum ratione id repellendus corrupti.</p>
+                    <div class="destino-card">
+                        <img src="/imgs/caption.jpg" alt="Paris">
+                        <h3>Paris, França</h3>
+                    </div>
+                    <div class="destino-card">
+                        <img src="/imgs/caption.jpg" alt="Veneza">
+                        <h3>Veneza, Itália</h3>
+                    </div>
+                    <div class="destino-card">
+                        <img src="/imgs/caption.jpg" alt="Barcelona">
+                        <h3>Barcelona, Espanha</h3>
+                    </div>
                 </div>
             </div>
 
-            <div class="box">
-                <img src="/imgs/Design sem nome/4.png" alt="">
-                <div class="box-text-hover">
-                    <h1>Rio de Janeiro, Brasil</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat placeat totam quod possimus magni eum a quam tempora explicabo illo magnam animi provident nulla nemo laudantium, fuga, odio enim. Beatae!</p>
+            <!-- Ásia -->
+            <div class="destino-secao">
+                <h2>Ásia</h2>
+                <div class="destino-grid">
+                    <div class="destino-card">
+                        <img src="/imgs/caption.jpg" alt="Tóquio">
+                        <h3>Tóquio, Japão</h3>
+                    </div>
+                    <div class="destino-card">
+                        <img src="/imgs/seoul.jpg" alt="Seul">
+                        <h3>Seul, Coreia do Sul</h3>
+                    </div>
+                    <div class="destino-card">
+                        <img src="/imgs/bangkok.jpg" alt="Bangkok">
+                        <h3>Bangkok, Tailândia</h3>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- África -->
+            <div class="destino-secao">
+                <h2>África</h2>
+                <div class="destino-grid">
+                    <div class="destino-card">
+                        <img src="/imgs/cairo.jpg" alt="Cairo">
+                        <p>Cairo, Egito</p>
+                    </div>
+                    <div class="destino-card">
+                        <img src="/imgs/cape-town.jpg" alt="Cidade do Cabo">
+                        <h3>Cidade do Cabo, África do Sul</h3>
+                    </div>
+                    <div class="destino-card">
+                        <img src="/imgs/marrakech.jpg" alt="Marrakech">
+                        <h3>Marrakech, Marrocos</h3>
+                    </div>
                 </div>
             </div>
-            <div class="box">
-                <img src="/imgs/Design sem nome/5.png"">
-                <div class="box-text-hover">
-                    <h1>Cairo, Egito</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit officiis obcaecati autem minus voluptatum molestias blanditiis eligendi hic vero, temporibus neque quo. Officia architecto tenetur, veritatis nihil iusto porro atque!</p>
-                </div>
-            </div>
-            <div class="box">
-                <img src="/imgs/Design sem nome/14.png"">
-                <div class="box-text-hover">
-                    <h1>Barcelona, Espanha</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis assumenda soluta voluptates dolor vitae atque hic molestiae reprehenderit veniam est suscipit nesciunt optio laboriosam dolorum possimus vel, blanditiis nulla? Quo.</p>
-                </div>
-            </div>
-            <div class="box">
-                <img src="/imgs/Design sem nome/7.png"">
-                <div class="box-text-hover">
-                    <h1>Veneza, Itália</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda iure praesentium, eveniet perferendis quaerat hic, vero laboriosam corrupti in eligendi laborum. At praesentium consequatur quibusdam laborum illo. Eaque, animi!</p>
-                </div>
-            </div>
-            <div class="box">
-                <img src="/imgs/Design sem nome/16.png"">
-                <div class="box-text-hover">
-                    <h1>Seol, Coreia do Sul</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo non aut, vel dolorum eos quam asperiores nemo, ipsa quo pariatur officiis minima eius nam! Sit ducimus ea dolore mollitia magnam!</p>
-                </div>
-            </div>
-        </div>
+        </section>
+
+        <!-- Rodapé -->
         <footer class="home-footer">
             <div class="footer-text">
                 <p>&copy; 2024 Pyxis Viagem e Turismo - Todos os direitos reservados.</p>
@@ -107,6 +103,5 @@
             </div>
         </footer>
     </div>
-</section>
 </body>
 </html>

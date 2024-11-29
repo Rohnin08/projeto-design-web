@@ -145,16 +145,31 @@
     margin: 0 2rem 0 2rem;
 }
 
-.home-footer {
-    padding: 10px 0;
-    bottom: 0;
+.main-banner-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 2rem 0;
 }
 
 .banner-home {
-    width: 1500px;
-    height: 630px;    
-   }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+}
 
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.radio-buttons input {
+    height: 16px;
+    width: 16px;
+}
 
 .main {
     display: flex;
@@ -170,18 +185,31 @@
     flex-direction: row;
     gap: 2rem;
     margin: 2rem;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .promocoes-card {
-    height: 500px;
-    width: 430px;
+    height: 400px;
+    width: 300px;
     align-content: center;
-    background-color: blue;
+}
+.promocoes-card img:hover {
+    background-color: #dddddd;
+    opacity: 1; 
+    transition: 0.1s;
+}
+.pacotes_promocao_grid button {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: rgb(4, 77, 166);
+    color:#dddddd;
+}
+.pacotes_promocao_grid button:hover {
+    background-color: rgb(0, 43, 96);
 }
 .promocoes-card img{
-    height: 61.6%;
     border-radius: 10px;
 }
 .avaliacoes {
@@ -198,7 +226,7 @@
 .avaliacoes-grid {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
     margin: 2rem;
     align-items: center;
@@ -217,9 +245,9 @@
 }
 
 .avaliacao-card {
-    height: 130px;
+    height: 140px;
     padding: 0 16px 0 16px;
-    width: 280px;
+    width: 300px;
     border-radius: 10px;
     background-color:#dddddd;
     box-shadow: 0 0 15px 1px rgb(186, 186, 186);
@@ -258,48 +286,29 @@
     font-size: xx-large;
     color:  rgb(5, 76, 162);
 }
-.boxes {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
-    margin: 2rem;
-}
-  
-  .box {
-    width: 400px;
-    height: 300px;
-    background-color: #ccc; 
-    position: relative;
-    border-radius: 10px;
-    justify-content: center; 
-    align-items: center; 
-    overflow: hidden; 
-    cursor: pointer; 
-    box-shadow: 0 0 15px 1px rgb(186, 186, 186);
-  }
 
-  
-  .box-text-hover {
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    position: absolute;
-    inset: 0; 
-    opacity: 0; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease-in-out; 
-    text-align: justify;
+.destino-secao {
+    margin-bottom: 2rem;
 }
-  
-  .box:hover .box-text-hover {
-    opacity: 1; 
-  }
+
+.destino-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.destino-card {
+    width: 300px;
+    text-align: left;
+}
+
+.destino-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /*Itinerarios*/
 
