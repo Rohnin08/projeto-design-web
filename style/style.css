@@ -79,7 +79,7 @@
     width: 100%;
     height: 6rem;
     background-color:rgb(216, 233, 240);
-    border-bottom: solid 1px rgb(211, 214, 214);
+    border-top: solid 1px rgb(211, 214, 214);
   }
 
   .footer-text {
@@ -149,6 +149,7 @@
     display: flex;
     flex-direction: column;
     margin: 2rem 0 2rem 0;
+    align-items: center;
 }
 
 .banner-home {
@@ -263,56 +264,56 @@
 .avaliacao-card p {
     position: relative;
 }
-/*Destinos*/
-#destinos {
+
+/*Paginas*/
+#destinos, #itinerarios {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    justify-content: center;
-    margin-right: 2rem;
-    margin-left:2rem;
-}
-
-.destinos {
-    display: flex;
-    flex-direction: column;
+    margin: 0 2rem;
     justify-content: center;
     align-items: center;
-    justify-content: center;
-
 }
 
-.destinos h1{
+.destinos-texto h1, .itinerarios-texto h1 {
     font-size: xx-large;
-    color:  rgb(5, 76, 162);
+    text-align: center;
+    color: rgb(5, 76, 162);
 }
 
-.destino-secao {
-    margin-bottom: 2rem;
+.destinos-texto p, .itinerarios-texto p{
+    margin-top: 3px;
+    font-size: large;
+    text-align: center;
 }
 
-.destino-grid {
+
+.destino-secao, .itinerario-secao {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.destino-grid, .itinerario-grid {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 2rem 0 1rem 0;
 }
 
-.destino-card {
+.destino-card, .itinerario-card {
     width: 300px;
     text-align: left;
 }
 
-.destino-card img {
+.destino-card img, .itinerario-card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*Itinerarios*/
-
-/*Dicas de Viagem*/
 
 /*Galeria*/
 
