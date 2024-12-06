@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 * {
@@ -10,7 +10,7 @@
     
 }
 /*Geral*/
-.home-container {
+.container {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
     width: 100%;
 }
 
-.home-footer {
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,7 +102,8 @@
     gap: 1rem;
 }
 
-/*Home*/
+
+
 .search-bar {
     display: flex;
     width: 100%;
@@ -141,7 +142,7 @@
     width: 100%;
     height: auto;
 }
-.home-main {
+.home-main, #destinos, #itinerarios, #dicas {
     margin: 0 2rem 0 2rem;
 }
 
@@ -172,11 +173,6 @@
     width: 16px;
 }
 
-.main {
-    display: flex;
-    margin:  0 16px 0 16px;
-}
-
 .promocoes-pacotes {
     display: flex;
     flex-direction: column;
@@ -184,10 +180,11 @@
 .pacotes_promocao_grid {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 2rem;
-    margin: 2rem;
-    justify-content: space-evenly;
+    margin: 2rem 0 2rem 0;
     align-items: center;
+    transition: transform 0.3s;
 }
 
 .promocoes-card {
@@ -195,6 +192,21 @@
     width: 300px;
     align-content: center;
 }
+
+.promocoes-card:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); Sombra mais intensa */
+}
+
+.promocoes-card img {
+    border-radius: 10px;
+    transition: opacity 0.3s; /* Transição suave para opacidade */
+}
+
+.promocoes-card img:hover {
+    opacity: 0.8; /* Diminui a opacidade ao passar o mouse */
+}
+
 .promocoes-card img:hover {
     background-color: #dddddd;
     opacity: 1; 
@@ -212,11 +224,30 @@
 }
 .promocoes-card img{
     border-radius: 10px;
+    transition: opacity 0.3s; /* Efeito de transição para a opacidade */
+}
+.promocoes-card img:hover {
+    opacity: 0.8
+}
+
+.destinos-destaque {
+    display: flex;
+    flex-direction: column;
+}
+.destino-grid-destaque {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 .avaliacoes {
     display: flex;
     flex-direction: column;        
 }
+
+
     
 .avaliacoes-titulo {
     display: flex;
@@ -257,13 +288,14 @@
     text-align:center;
 }
 .avaliacao-card:hover {
-    width: 135px;
-    width: 285px;
+    transform: translateY(-5px);
 }
 
 .avaliacao-card p {
     position: relative;
 }
+
+
 
 /*Paginas*/
 #destinos, #itinerarios {
@@ -307,12 +339,29 @@
     text-align: left;
 }
 
+.destino-card:hover, .itinerario-card:hover {
+    transform: translateY(-5px); /* Efeito ao passar o mouse */
+}
+
 .destino-card img, .itinerario-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
 }
+
+.destino-card img:hover, .itinerario-card img:hover {
+    opacity: 0.8; /* Imagem levemente mais clara ao passar o mouse */
+}
+
+/* Limpeza de floats após os cartões */
+.destino-grid::after, .itinerario-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .page_container {
     display: flex;
@@ -353,7 +402,7 @@
     display: flex;
     align-items: center;
     margin: 5rem;
-}
+} */
 
 
 /*Galeria*/
