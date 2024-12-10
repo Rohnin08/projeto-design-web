@@ -5,9 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-
-    
+    font-family: "Montserrat", sans-serif;    
 }
 /*Geral*/
 .container {
@@ -79,7 +77,7 @@
     width: 100%;
     height: 6rem;
     background-color:rgb(216, 233, 240);
-    border-top: solid 1px rgb(211, 214, 214);
+    border-top: solid 1px rgb(228, 228, 228);
   }
 
   .footer-text {
@@ -143,7 +141,7 @@
     height: auto;
 }
 .home-main, #destinos, #itinerarios, #dicas {
-    margin: 0 2rem 0 2rem;
+   padding: 0 2rem 0 2rem;
 }
 
 .main-banner-container {
@@ -177,6 +175,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .pacotes_promocao_grid {
     display: flex;
     flex-direction: row;
@@ -200,7 +199,10 @@
 
 .promocoes-card img {
     border-radius: 10px;
-    transition: opacity 0.3s; /* Transição suave para opacidade */
+    transition: opacity 0.3s;
+    max-height: 300px;
+    max-width: 300px;
+    /* Transição suave para opacidade */
 }
 
 .promocoes-card img:hover {
@@ -212,6 +214,7 @@
     opacity: 1; 
     transition: 0.1s;
 }
+
 .pacotes_promocao_grid button {
     height: 40px;
     width: 40px;
@@ -219,21 +222,25 @@
     background-color: rgb(4, 77, 166);
     color:#dddddd;
 }
+
 .pacotes_promocao_grid button:hover {
     background-color: rgb(0, 43, 96);
 }
-.promocoes-card img{
-    border-radius: 10px;
-    transition: opacity 0.3s; /* Efeito de transição para a opacidade */
-}
-.promocoes-card img:hover {
-    opacity: 0.8
-}
 
-.destinos-destaque {
+/* .promocoes-card img{
+    border-radius: 10px;
+    transition: opacity 0.3s;
+} */
+
+/* .promocoes-card img:hover {
+    opacity: 0.8
+} */
+
+.destinos_destaque {
     display: flex;
     flex-direction: column;
 }
+
 .destino-grid-destaque {
     margin: 2rem 0 2rem 0;
     display: flex;
@@ -246,8 +253,6 @@
     display: flex;
     flex-direction: column;        
 }
-
-
     
 .avaliacoes-titulo {
     display: flex;
@@ -277,9 +282,9 @@
 }
 
 .avaliacao-card {
-    height: 140px;
+    min-height: 140px;
     padding: 0 16px 0 16px;
-    width: 300px;
+    min-width: 300px;
     border-radius: 10px;
     background-color:#dddddd;
     box-shadow: 0 0 15px 1px rgb(186, 186, 186);
@@ -302,7 +307,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    margin: 0 2rem;
+    margin: 0 ;
     justify-content: center;
     align-items: center;
 }
@@ -323,20 +328,22 @@
 .destino-secao, .itinerario-secao {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0;
+    margin: 2rem 0 2rem 0  ;
 }
 
 .destino-grid, .itinerario-grid {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 0 1rem 0;
+    flex-wrap: nowrap;
+    padding: 2rem 0 1rem 0;
 }
 
 .destino-card, .itinerario-card {
-    width: 300px;
+    min-width: 260px;
+    min-height: 320px;
     text-align: left;
+    transition: ease-in-out 0.3s;
 }
 
 .destino-card:hover, .itinerario-card:hover {
@@ -373,6 +380,11 @@
     justify-content: flex-start;
 }
 
+.destino_visao_geral > .header_title {
+    display: flex;
+    justify-content: space-between;
+}
+
 .dvg_paragrafo {
   max-width: 600px;
   line-height: 1.5;
@@ -400,11 +412,87 @@
 
 .page_main_content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 5rem;
-} */
+} 
 
 
 /*Galeria*/
 
 /*Contato*/
+
+/* ============== Carrossel ============== */
+
+/* Estilo geral */
+.des.promocoes-pacotes {
+    max-width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.pacotes_promocao_wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Scroll snap para rolagem suave */
+    display: flex;
+    gap: 16px; /* Espaçamento entre os itens */
+    padding: 16px 0;
+    scrollbar-width: thin; /* Barra de rolagem fina no Firefox */
+    scrollbar-color: #888 #f0f0f0; /* Cor da barra no Firefox */
+}
+
+.pacotes_promocao_wrapper::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem no Chrome */
+}
+
+.pacotes_promocao_wrapper::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.pacotes_promocao_wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+/* Contêiner dos cards */
+.pacotes_promocao_grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px; /* Espaçamento horizontal entre os itens */
+}
+
+.promocoes-card {
+    min-width: 250px; /* Largura mínima dos cards */
+    flex: 0 0 auto; /* Os itens não encolhem */
+    scroll-snap-align: center; /* Alinha os itens ao centro ao rolar */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das imagens */
+.promocoes-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo do texto */
+.promocoes-card h3 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+.promocoes-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+
+/* ============== Carrossel ============== */
