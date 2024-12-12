@@ -74,8 +74,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 6rem;
+    min-width: 100%;
+    min-height: 80px;
     background-color:rgb(216, 233, 240);
     border-top: solid 1px rgb(228, 228, 228);
   }
@@ -119,7 +119,6 @@
     box-shadow: 0 0 15px 1px rgb(212, 212, 212);
 }
 
-
 .search-bar button {
     width: 130px;
     height: 3rem;
@@ -133,6 +132,7 @@
 
 .search-bar button:hover {
    background-color: rgb(0, 43, 96); 
+   transition: ease-in-out 0.3s;
 }
 
 .search-bar-container {
@@ -141,8 +141,10 @@
     height: auto;
 }
 .home-main, #destinos, #itinerarios, #dicas {
-   padding: 0 2rem 0 2rem;
+   margin: 0 10rem 0 10rem;
 }
+
+
 
 .main-banner-container {
     display: flex;
@@ -159,17 +161,10 @@
     margin: 1rem 0 1rem 0;
 }
 
-.radio-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.radio-buttons input {
+ .radio-buttons input {
     height: 16px;
     width: 16px;
-}
+} 
 
 .promocoes-pacotes {
     display: flex;
@@ -190,6 +185,7 @@
     height: 400px;
     width: 300px;
     align-content: center;
+    transition: ease-in-out 0.3s
 }
 
 .promocoes-card:hover {
@@ -214,27 +210,6 @@
     opacity: 1; 
     transition: 0.1s;
 }
-
-.pacotes_promocao_grid button {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    background-color: rgb(4, 77, 166);
-    color:#dddddd;
-}
-
-.pacotes_promocao_grid button:hover {
-    background-color: rgb(0, 43, 96);
-}
-
-/* .promocoes-card img{
-    border-radius: 10px;
-    transition: opacity 0.3s;
-} */
-
-/* .promocoes-card img:hover {
-    opacity: 0.8
-} */
 
 .destinos_destaque {
     display: flex;
@@ -291,6 +266,7 @@
     justify-content: center;
     align-content: center;
     text-align:center;
+    transition: ease-in-out 0.3s
 }
 .avaliacao-card:hover {
     transform: translateY(-5px);
@@ -307,7 +283,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    margin: 0 ;
+    margin: 0;
     justify-content: center;
     align-items: center;
 }
@@ -325,7 +301,9 @@
 }
 
 
-.destino-secao, .itinerario-secao {
+
+
+.destino-secao .itinerario-secao {
     display: flex;
     flex-direction: column;
     margin: 2rem 0 2rem 0  ;
@@ -333,13 +311,13 @@
 
 .destino-grid, .itinerario-grid {
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
     justify-content: center;
     flex-wrap: nowrap;
     padding: 2rem 0 1rem 0;
 }
 
-.destino-card, .itinerario-card {
+.destino-card .itinerario-card {
     min-width: 260px;
     min-height: 320px;
     text-align: left;
@@ -351,7 +329,7 @@
 }
 
 .destino-card img, .itinerario-card img {
-    width: 100%;
+    min-width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -414,7 +392,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem;
+    margin: 2px;
 } 
 
 
@@ -425,7 +403,7 @@
 /* ============== Carrossel ============== */
 
 /* Estilo geral */
-.des.promocoes-pacotes {
+.promocoes-pacotes {
     max-width: 100%;
     padding: 16px;
     box-sizing: border-box;
@@ -437,8 +415,6 @@
     display: flex;
     gap: 16px; /* Espaçamento entre os itens */
     padding: 16px 0;
-    scrollbar-width: thin; /* Barra de rolagem fina no Firefox */
-    scrollbar-color: #888 #f0f0f0; /* Cor da barra no Firefox */
 }
 
 .pacotes_promocao_wrapper::-webkit-scrollbar {
@@ -451,15 +427,18 @@
 }
 
 .pacotes_promocao_wrapper::-webkit-scrollbar-thumb {
-    background: #888;
+    background:rgb(5, 76, 162);
     border-radius: 4px;
 }
 
-/* Contêiner dos cards */
+.pacotes_promocao_wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 43, 96); /* Cor ao passar o mouse */
+}
+
 .pacotes_promocao_grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 16px; /* Espaçamento horizontal entre os itens */
+    gap: 16px; /* Espaçamento entre os cards */
 }
 
 .promocoes-card {
@@ -492,7 +471,91 @@
     color: #666;
 }
 
+/* avaliações */
 
+.avaliacoes {
+    width: 100%;
+    overflow: hidden;
+  }
 
+  .avaliacoes-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+  }
+
+  .avaliacao-card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .avaliacoes-grid::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .avaliacoes-grid::-webkit-scrollbar-thumb {
+    background: #4c7ec0;
+    border-radius: 4px;
+  }
+
+  .avaliacoes-grid::-webkit-scrollbar-thumb:hover {
+    background: #2227a8;
+  }
+
+  .avaliacoes-grid::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  /* Destinos  em destaque*/
+
+  /* Wrapper para o slider */
+.destino-carousel-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Scroll snap para rolagem suave */
+    display: flex;
+    gap: 16px; /* Espaçamento entre os itens */
+    padding: 16px 0;
+}
+
+/* Scrollbar estilizada */
+.destino-carousel-wrapper::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+}
+
+.destino-carousel-wrapper::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Cor do fundo da barra */
+    border-radius: 4px;
+}
+
+.destino-carousel-wrapper::-webkit-scrollbar-thumb {
+    background: #4c7ec0; /* Cor padrão do scroll */
+    border-radius: 4px;
+}
+
+.destino-carousel-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #2227a8; /* Cor ao passar o mouse */
+}
+
+/* Grid de destinos */
+.destino-grid-destaque {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px; /* Espaçamento entre os cartões */
+    
+}
+
+.destino-card {
+    scroll-snap-align: center; /* Alinha os cartões ao centro ao rolar */
+    flex: 0 0 calc(100% - 32px); /* Garante que os cartões se ajustem ao slider */
+    max-width: 260px; /* Limite para a largura máxima dos cartões */ /* Os itens não encolhem */
+}
 
 /* ============== Carrossel ============== */
