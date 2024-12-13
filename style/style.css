@@ -140,6 +140,96 @@
     width: 100%;
     height: auto;
 }
+
+/* banner */
+/* Main container for the banner */
+.main-banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Slider container */
+.slider-banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide radio buttons */
+.slider-banner input[type="radio"] {
+    display: none;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    /* width: 400%; Adjust for the number of slides */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Single slide */
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Images */
+.slide img {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation buttons (dots) */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+.nav {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav:hover {
+    background-color: #849dc9;
+}
+
+/* Slider behavior */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+#slide4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+/* Highlight active navigation dot */
+#slide1:checked ~ .navigation label:nth-child(1),
+#slide2:checked ~ .navigation label:nth-child(2),
+#slide3:checked ~ .navigation label:nth-child(3),
+#slide4:checked ~ .navigation label:nth-child(4) {
+    background-color: #0247ad;
+}
+
 .home-main, #destinos, #itinerarios, #dicas {
    margin: 0 10rem 0 10rem;
 }
@@ -217,12 +307,12 @@
 }
 
 .destino-grid-destaque {
-    margin: 2rem 0 2rem 0;
+    padding: 2rem 10px 2rem 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
 }
 .avaliacoes {
     display: flex;
@@ -278,54 +368,56 @@
 
 
 
-/*Paginas*/
+/* Paginas */
 #destinos, #itinerarios {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    margin: 0;
+}
+
+.destinos-texto, .itinerarios-texto {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0 1rem 0 ;
+    font-size: larger;
+    
 }
 
 .destinos-texto h1, .itinerarios-texto h1 {
-    font-size: xx-large;
-    text-align: center;
-    color: rgb(5, 76, 162);
+    color: #0247ad;
 }
-
-.destinos-texto p, .itinerarios-texto p{
-    margin-top: 3px;
-    font-size: large;
-    text-align: center;
-}
-
-
-
-
 .destino-secao .itinerario-secao {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 2rem 0  ;
+    margin: 2rem 0 4rem 0;
 }
 
 .destino-grid, .itinerario-grid {
     display: flex;
     gap: 4rem;
-    justify-content: center;
-    flex-wrap: nowrap;
-    padding: 2rem 0 1rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 0;
+    width: 100%;
+    min-width: 100%;
 }
 
-.destino-card .itinerario-card {
-    min-width: 260px;
+.destino-card, .itinerario-card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    max-width: 260px;
     min-height: 320px;
     text-align: left;
     transition: ease-in-out 0.3s;
 }
 
+.destino-grid-destaque > .destino-card {
+    max-height: 300px;
+}
+
 .destino-card:hover, .itinerario-card:hover {
-    transform: translateY(-5px); /* Efeito ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 .destino-card img, .itinerario-card img {
@@ -337,10 +429,26 @@
 }
 
 .destino-card img:hover, .itinerario-card img:hover {
-    opacity: 0.8; /* Imagem levemente mais clara ao passar o mouse */
+    opacity: 0.8;
 }
 
-/* Limpeza de floats após os cartões */
+.destino-grid::-webkit-scrollbar, .itinerario-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.destino-grid::-webkit-scrollbar-thumb, .itinerario-grid::-webkit-scrollbar-thumb {
+    background: #4c7ec0;
+    border-radius: 4px;
+}
+
+.destino-grid::-webkit-scrollbar-thumb:hover, .itinerario-grid::-webkit-scrollbar-thumb:hover {
+    background: #2227a8;
+}
+
+.destino-grid::-webkit-scrollbar-track, .itinerario-grid::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
 .destino-grid::after, .itinerario-grid::after {
     content: "";
     display: table;
@@ -545,12 +653,6 @@
 }
 
 /* Grid de destinos */
-.destino-grid-destaque {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 16px; /* Espaçamento entre os cartões */
-    
-}
 
 .destino-card {
     scroll-snap-align: center; /* Alinha os cartões ao centro ao rolar */
