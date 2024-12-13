@@ -341,18 +341,7 @@
     margin: 2rem;
     align-items: center;
 }
-.avaliacoes-grid button {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    background-color: rgb(4, 77, 166);
-    color: #ccc;
-    box-shadow: 0 0 3px 1px rgb(186, 186, 186);
-}
 
-.avaliacoes-grid button:hover {
-    background-color: rgb(0, 43, 96);
-}
 
 .avaliacao-card {
     min-height: 140px;
@@ -519,7 +508,80 @@
     margin: 2px;
 } 
 
+/*Dicas e Artigos de Viagem*/
 
+.texto-artigos-viagem  {
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.texto-artigos-viagem {
+    color: rgb(4, 67, 144);
+    font-size: larger;
+}
+.texto-artigo-sub {
+    display: flex;
+    border-bottom: solid 2px #525151;
+    width: 1000px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#dicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:30px ;
+    
+    
+}
+
+.texto-artigos-viagem h1 {
+    margin: 16px;
+}
+
+.artigo-lista {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.artigo-texto {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 700px;
+    text-align: justify;
+    gap:1rem;
+    /* justify-content: center; */
+    
+}
+
+.artigo-texto h1 {
+    font-size: xx-large;
+}
+
+.artigo-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.artigo-img {
+    max-height: 300px;
+    min-width: auto;
+    margin: 0 1rem 0 1rem;
+}
+
+.artigo-img img {
+    border-radius: 16px;
+}
 /*Galeria*/
 
 /*Contato*/
@@ -677,3 +739,204 @@
 }
 
 /* ============== Carrossel ============== */
+
+
+/* destinos-page */
+
+/* Destinos Page Slider */
+
+/* Main container */
+.dp-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Slider container */
+.dp-slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide radio buttons */
+.dp-slider input[type="radio"] {
+    display: none;
+}
+
+/* Slides container */
+.dp-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each slide */
+.dp-slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.dp-slide img {
+    border-radius: 16px;
+    max-width: 1136px;
+    height: auto;
+    display: block;
+}
+
+/* Navigation dots */
+.dp-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+.dp-nav {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dp-nav:hover {
+    background-color: #849dc9;
+}
+
+/* Slider behavior */
+#dp-slide1:checked ~ .dp-slides {
+    transform: translateX(0);
+}
+#dp-slide2:checked ~ .dp-slides {
+    transform: translateX(-100%);
+}
+#dp-slide3:checked ~ .dp-slides {
+    transform: translateX(-200%);
+}
+#dp-slide4:checked ~ .dp-slides {
+    transform: translateX(-300%);
+}
+
+/* Highlight active navigation dot */
+#dp-slide1:checked ~ .dp-navigation label:nth-child(1),
+#dp-slide2:checked ~ .dp-navigation label:nth-child(2),
+#dp-slide3:checked ~ .dp-navigation label:nth-child(3),
+#dp-slide4:checked ~ .dp-navigation label:nth-child(4) {
+    background-color: #0247ad;
+}
+
+
+/* destino */
+
+.dp-main {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 10rem 4rem 10rem;
+}
+
+.destino_page {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 10rem 3rem 10rem;
+}
+
+.dp-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dp-desc {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    text-align: justify;
+}
+
+.pd-tit {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.pd-tit button {
+    min-width: 90px;
+    max-height: 40px;
+    border: solid 1px rgb(106, 106, 106);
+    box-shadow: rgb(106, 106, 106) 0 0 2px;
+    border-radius: 2rem ;;
+}
+
+.pd-tit button:hover {
+    background-color: rgb(228, 228, 228);
+    border-color: #ccc;
+    transition: ease-in-out 0.2s;
+}
+
+.dp-essencial {
+    display: flex;
+    flex-direction: row;
+}
+
+.dp-essencial-slider {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+    overflow-x: auto; /* Ativa a rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Habilita o comportamento de rolagem "encaixado" */
+    -webkit-overflow-scrolling: touch; /* Permite rolagem suave em dispositivos móveis */
+}
+
+.dp-essencial-elc {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.essenc-elem {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    height: 2rem;
+    min-width: 150px; /* Define uma largura mínima para cada item */
+    border: solid 1px rgb(106, 106, 106);
+    box-shadow: rgb(106, 106, 106) 0 0 2px;
+    border-radius: 2rem;
+    flex-shrink: 0; /* Impede que os itens encolham */
+    scroll-snap-align: center; /* Faz o item se alinhar ao centro quando parar de rolar */
+    border: solid 1px rgb(106, 106, 106);
+    box-shadow: rgb(106, 106, 106) 0 0 2px;
+    border-radius: 2rem;
+}
+
+.essenc-elem:hover {
+    background-color: rgb(228, 228, 228);
+    transition: ease-in-out 0.2s;
+}
+
+/* Barra de rolagem (a linha principal) */
+.dp-essencial-slider::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+    transition: height 0.3s ease; /* Adiciona transição suave para a altura */
+}
+
+/* A parte "movível" da barra de rolagem (thumb) */
+.dp-essencial-slider::-webkit-scrollbar-thumb {
+    background-color: #0247ad; /* Cor do "thumb" */
+    border-radius: 10px; /* Raio da borda (curvatura) */
+    transition: background-color 0.3s ease; /* Transição suave para a cor */
+}
+
+/* A área da trilha da barra de rolagem (track) */
+.dp-essencial-slider::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Cor do fundo da trilha */
+    border-radius: 10px; /* Raio da borda do track */
+}
