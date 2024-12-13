@@ -24,9 +24,17 @@
 }
 
 .home-head-logo img {
-    height: 80%
+    height: 70%
 }
-
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+}
 .navbar {
     display: flex;
     flex-direction: row;
@@ -77,7 +85,7 @@
     min-width: 100%;
     min-height: 80px;
     background-color:rgb(216, 233, 240);
-    border-top: solid 1px rgb(228, 228, 228);
+    border-top: solid 2px rgb(228, 228, 228);
   }
 
   .footer-text {
@@ -372,6 +380,7 @@
 #destinos, #itinerarios {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .destinos-texto, .itinerarios-texto {
@@ -387,20 +396,27 @@
 .destinos-texto h1, .itinerarios-texto h1 {
     color: #0247ad;
 }
-.destino-secao .itinerario-secao {
+.destino-secao, .itinerario-secao {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 4rem 0;
+    margin: 1rem 0 3rem 0;
+    margin-bottom: 2rem;
+    
 }
 
 .destino-grid, .itinerario-grid {
     display: flex;
-    gap: 4rem;
+    gap: 3.5rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 2rem 0;
+    padding: 1rem 0 1rem ;
     width: 100%;
     min-width: 100%;
+}
+
+.destino-grid a, .itinerario-grid {
+    text-decoration: none;
+    color: black;
 }
 
 .destino-card, .itinerario-card {
@@ -521,8 +537,8 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory; /* Scroll snap para rolagem suave */
     display: flex;
-    gap: 16px; /* Espaçamento entre os itens */
-    padding: 16px 0;
+    gap: 1rem; /* Espaçamento entre os itens */
+    padding: 1em 0;
 }
 
 .pacotes_promocao_wrapper::-webkit-scrollbar {
