@@ -833,6 +833,17 @@
 
 /* destino */
 
+.dp-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.dp-banner img {
+    max-width: 1160px;
+    max-height: auto;
+    border-radius: 1rem;
+}
+
 .dp-main {
     display: flex;
     flex-direction: column;
@@ -864,6 +875,7 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    justify-content: space-between;
 }
 
 .pd-tit button {
