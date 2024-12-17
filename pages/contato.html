@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central de Contato</title>
     <link rel="stylesheet" href="/style/style.css">
+    <script src="https://kit.fontawesome.com/589aae2d69.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -25,15 +26,15 @@
 
         <div class="cto-list">
             <ul class="cto-elem">
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Entre em contato</a></li>
-                <li><a href="#">Redes sociais</a></li>
+                <li><a href="#sbr-ns">Sobre nós</a></li>
+                <li><a href="#formu-cto">Entre em contato</a></li>
+                <li><a href="#social-media">Redes sociais</a></li>
             </ul>
         </div>
 
         <main class="cto-main">
             <!-- Seção Sobre a Empresa -->
-            <section class="sobre-nos">
+            <section id="sbr-ns">
                 <h2>Sobre a Pyxis</h2>
                 <p>A Pyxis é uma empresa inovadora dedicada a fornecer soluções eficientes e criativas no setor de tecnologia. Com uma equipe de profissionais especializados, buscamos transformar ideias em produtos que atendem às necessidades do nosso público. Nossa missão é promover a excelência em tudo o que fazemos, garantindo sempre a satisfação de nossos clientes.</p>
                 <p>Com foco em qualidade, segurança e inovação, a Pyxis se posiciona como um líder de mercado, desenvolvendo soluções tecnológicas de ponta e criando relações duradouras com seus parceiros e clientes.</p>
@@ -41,8 +42,10 @@
     
             <!-- Informações Gerais de Contato -->
             <section class="cto-info">
-                <h2>Informações Gerais</h2>
-                <ul>
+                <div class="cto-info-txt">
+                    <h2>Informações Gerais</h2>
+                </div>
+                <ul class="cto-info-ls">
                     <li><strong>Endereço:</strong> Rua dos Viajantes, 345, Bairro Turístico, Rio de Janeiro, RJ, Brasil</li>
                     <li><strong>Telefone:</strong> +55 21 98765-4321</li>
                     <li><strong>Email:</strong> <a href="mailto:contato@pyxis.com">contato@pyxis.com</a></li>
@@ -51,52 +54,41 @@
             </section>
     
             <!-- Formulário de Contato -->
-            <section class="formulario-contato">
-                <h2>Envie sua Mensagem</h2>
-                <form action="">
-                    <div class="cto-form-group">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-                    </div>
-    
-                    <div class="cto-form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Seu email" required>
-                    </div>
-    
-                    <div class="cto-form-group">
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" name="assunto" placeholder="Motivo do contato" required>
-                    </div>
-    
-                    <div class="cto-form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui" required></textarea>
-                    </div>
-    
-                    <button type="submit">Enviar</button>
-                </form>
+            <section id="formu-cto">
+                <div class="form-cto">
+                    <h2>Envie sua Mensagem</h2>
+                </div>
+                <div class="link-form-cto">
+                    <a href="/pages/paginas_teste/formContato.html">
+                        Formulario de Contato
+                    </a>
+                </div>
             </section>
     
             <!-- Contato para Profissionais -->
             <section class="cto-prof">
-                <h2>Contato para Profissionais</h2>
-                <p>Se você faz parte do setor de viagens, imprensa ou precisa de suporte comercial, entre em contato:</p>
-                <ul>
+                <div class="cto-prof-txt">
+                    <h2>Contato para Profissionais</h2>
+                    <p>Se você faz parte do setor de viagens, imprensa ou precisa de suporte comercial, entre em contato:</p>
+                </div>
+                <ul class="cto-prof-ls">
                     <li><strong>Setor Comercial:</strong> <a href="mailto:vendas@pyxis.com">vendas@pyxis.com</a></li>
                     <li><strong>Contato para Imprensa:</strong> <a href="mailto:imprensa@pyxis.com">imprensa@pyxis.com</a></li>
                     <li><strong>Suporte Geral:</strong> <a href="mailto:suporte@pyxis.com">suporte@pyxis.com</a></li>
                 </ul>
             </section>
 
-            <section class="redes-sociais">
-                <h2>Conecte-se conosco</h2>
-                <p>Siga-nos nas redes sociais e fique por dentro das últimas novidades e atualizações!</p>
-                <ul>
-                    <li><a href="https://www.facebook.com/Pyxis" target="_blank"></a></li>
-                    <li><a href="https://www.instagram.com/Pyxis" target="_blank"></a></li>
-                    <li><a href="https://www.twitter.com/Pyxis" target="_blank"></a></li>
-                    <li><a href="https://www.linkedin.com/company/Pyxis" target="_blank"></a></li>
+            <section id="social-media">
+                <div class="social-txt">
+                    <h2>Conecte-se conosco</h2>
+                    <p>Siga-nos nas redes sociais e fique por dentro das últimas novidades e atualizações!</p>
+                </div>
+                <ul class="soc-list">
+                    <li><a href="https.//gmail.com.br/pyxis@gmail.com" class="soc-icon"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a href="https://www.instagram.com/Pyxis" target="_blank" class="soc-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.x.com/Pyxis" target="_blank" class="soc-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/Pyxis" target="_blank" class="soc-icon"> <i class="fa-brands fa-facebook"></i></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/Pyxis" target="_blank" class="soc-icon"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </section>
         </main>
