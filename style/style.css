@@ -20,7 +20,6 @@
     flex-direction: row;
     align-items: center;
     align-items: center;
-    margin-left: 2rem;
 }
 
 .home-head-logo img {
@@ -35,7 +34,115 @@
     max-height: 100px;
     min-height: 100px;
 }
+
+.cto-header {
+    background-color: rgb(216, 233, 240);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 0 4rem 0 3rem;
+    justify-content: space-between;
+}
+
+.back-pxs {
+    display: flex;
+    flex-direction: row;
+    align-items:  center;    
+}
+
+.back-pxs a::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: rgb(5, 76, 162);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.35s ease-in-out;
+}
+.back-pxs a:hover::after {
+    width: 100%;
+}
+
+
+.back-pxs a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    position: relative;
+}
+
+.cto-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 10rem 2rem 10rem;
+}
+
+.cto-banner {
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+    justify-content: center;
+    background: url(/imgs/Design\ sem\ nome.png);
+}
+.cto-list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: #9c9ea1;
+}
+    
+
+.cto-elem {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    min-height: 70px;
+    min-width: 100%;
+    justify-content: space-evenly;
+}
+.cto-elem li, a {
+    text-decoration: none;
+    list-style: none;
+    font-size: larger;
+    color: black;
+    position: relative;
+}
+
+.cto-elem a:hover::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: rgb(27, 27, 27);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.35s ease-in-out;
+}
+
+/* Quando o usuário passar o mouse, o underline vai se expandir */
+.cto-elem a:hover::after {
+    width: 100%;
+
+}
+
+.ct-d-cto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ct-d-cto h1 {
+    font-size:80px;
+    color: rgb(84, 198, 255);
+}
+
 .navbar {
+    padding: 0 1rem 0 2rem;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -117,6 +224,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 .search-bar input{
     width: 700px;
@@ -238,7 +346,7 @@
     background-color: #0247ad;
 }
 
-.home-main, #destinos, #itinerarios, #dicas {
+.home-main, #destinos, #itinerarios, #dicas, #galeria {
    margin: 0 10rem 0 10rem;
 }
 
@@ -847,7 +955,7 @@
 .dp-main {
     display: flex;
     flex-direction: column;
-    padding: 3rem 10rem 4rem 10rem;
+    padding: 3rem 5rem 3rem 5rem;
 }
 
 .destino_page {
@@ -867,8 +975,17 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 700px;
+    max-width: 100%;
     text-align: justify;
+}
+
+.td-cont { 
+    display: flex;
+    flex-direction: row;
+}
+
+.td-cont p {
+    text-indent: 50px;
 }
 
 .pd-tit {
@@ -882,8 +999,9 @@
     min-width: 90px;
     max-height: 40px;
     border: solid 1px rgb(106, 106, 106);
-    box-shadow: rgb(106, 106, 106) 0 0 2px;
-    border-radius: 2rem ;;
+    box-shadow: 0 4px 8px rgba(156, 156, 156, 0.1);
+
+    border-radius: 2rem ;
 }
 
 .pd-tit button:hover {
@@ -897,7 +1015,7 @@
     flex-direction: row;
 }
 
-.dp-essencial-slider {
+.dp-essencial-slider, .glr-slider {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -907,48 +1025,135 @@
     -webkit-overflow-scrolling: touch; /* Permite rolagem suave em dispositivos móveis */
 }
 
-.dp-essencial-elc {
+.dp-essencial-elc, .glr-sld-elc {
+    gap: 5px;
     display: flex;
     padding-bottom: 1rem;
 }
 
-.essenc-elem {
+.essenc-elem, .glr-sld-elem{
     display: flex;
     align-items: center;
     padding: 1rem;
     justify-content: center;
     height: 2rem;
     min-width: 150px; /* Define uma largura mínima para cada item */
-    border: solid 1px rgb(106, 106, 106);
+    border: solid 1px rgb(197, 197, 197);
     box-shadow: rgb(106, 106, 106) 0 0 2px;
     border-radius: 2rem;
     flex-shrink: 0; /* Impede que os itens encolham */
     scroll-snap-align: center; /* Faz o item se alinhar ao centro quando parar de rolar */
-    border: solid 1px rgb(106, 106, 106);
-    box-shadow: rgb(106, 106, 106) 0 0 2px;
+    border: solid 1px rgb(167, 167, 167);
     border-radius: 2rem;
 }
 
-.essenc-elem:hover {
+.essenc-elem:hover, .glr-sld-elem:hover {
     background-color: rgb(228, 228, 228);
     transition: ease-in-out 0.2s;
 }
 
 /* Barra de rolagem (a linha principal) */
-.dp-essencial-slider::-webkit-scrollbar {
+.dp-essencial-slider::-webkit-scrollbar, .glr-slider::-webkit-scrollbar{
     height: 8px; /* Altura da barra de rolagem */
     transition: height 0.3s ease; /* Adiciona transição suave para a altura */
 }
 
 /* A parte "movível" da barra de rolagem (thumb) */
-.dp-essencial-slider::-webkit-scrollbar-thumb {
+.dp-essencial-slider::-webkit-scrollbar-thumb, .glr-slider::-webkit-scrollbar-thumb{
     background-color: #0247ad; /* Cor do "thumb" */
     border-radius: 10px; /* Raio da borda (curvatura) */
     transition: background-color 0.3s ease; /* Transição suave para a cor */
 }
 
 /* A área da trilha da barra de rolagem (track) */
-.dp-essencial-slider::-webkit-scrollbar-track {
+.dp-essencial-slider::-webkit-scrollbar-track, .glr-slider::-webkit-scrollbar-track {
     background-color: #f0f0f0; /* Cor do fundo da trilha */
     border-radius: 10px; /* Raio da borda do track */
 }
+
+
+
+.dp-atividades, .dp-lpf {
+    display: flex;
+    flex-direction: column;
+}
+
+.dp-atv-grid, .dp-lpf-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dp-atv-tit, .dp-lpf-tit {
+    margin: 1rem 0 1rem 0;
+    
+}
+
+.dp-atv-card, .dp-lpf-card {
+    display: flex;
+    max-width: 335px;
+    flex-direction: column;
+    margin: 1rem 0 2rem 0;
+    
+}
+
+.dp-atv-img img, .dp-lpf-img img {
+    max-height: 222px;
+    border-radius: 1rem;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dp-atv-card-txt , .dp-lpf-card-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dp-atv-card-txt p, .dp-lpf-card-txt p {
+    font-size: smaller;
+}
+
+/* Galerias */
+
+.glr-tit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem 0;
+    max-width: 100%;
+}
+
+.glr-tit h1 {
+    color: #0247ad;
+    width: 100%;
+    text-align: center;
+}
+
+.glr-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.glr-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 320px;
+    min-width: 270px;
+    max-width: 270px;
+    background-color: #646363;
+    border-radius: 1rem;
+    padding: 2rem;
+    align-items: last baseline;
+    margin: 1rem 0 2rem 0;
+}
+
